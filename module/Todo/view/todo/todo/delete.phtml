@@ -1,0 +1,24 @@
+<?php
+    $deleteUrl = $this->url('todo', array(
+        'action' => 'delete',
+        'id'     => $this->id,
+    ));
+
+    $title = 'Delete todo list';
+    $this->headTitle($title);
+?>
+
+<h1><?php echo $this->escapeHtml($title); ?></h1>
+
+<p>
+    Are you sure that you want to delete
+    '<?php echo $this->escapeHtml($todo->name); ?>'?
+</p>
+
+<form action="<?php echo $deleteUrl; ?>" role="form" method="post">
+    <div>
+        <input type="hidden" name="id" value="<?php echo (int) $todo->id; ?>" />
+        <input type="submit" name="del" value="Yes" class="btn btn-danger" />
+        <input type="submit" name="del" value="No"  class="btn btn-default" />
+    </div>
+</form>

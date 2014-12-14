@@ -1,0 +1,29 @@
+<?php
+    $title = 'Todo lists';
+    $this->headTitle($title);
+?>
+<h1><?php echo $this->escapeHtml($title); ?></h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>&nbsp;</th>
+        </tr>
+    </thead>
+    <?php foreach ($todos as $todo) : ?>
+        <tr>
+            <td><?php echo $this->escapeHtml($todo->name);?></td>
+            <td>
+                <a href="<?php echo $this->url('todo',
+                    array('action'=>'edit', 'id' => $todo->id));?>" class="btn btn-default">Edit</a>
+                <a href="<?php echo $this->url('todo',
+                    array('action'=>'delete', 'id' => $todo->id));?>" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+    <?php endforeach; ?>
+</table>
+
+<p>
+    <a href="<?php echo $this->url('todo', array('action'=>'add'));?>" class="btn btn-primary">Add new todo</a>
+</p>

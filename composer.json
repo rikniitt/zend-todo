@@ -1,0 +1,9 @@
+{
+    "name": "zend-todo",
+    "require": {
+        "php": ">=5.3.3",
+        "zendframework/zendframework": "2.3.*",
+
+        "phpunit/phpunit": "4.4.0"
+    }
+}
