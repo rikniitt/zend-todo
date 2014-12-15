@@ -1,8 +1,8 @@
 Zend ToDo
 =========
 
-Example application for Software Architecture Project
-[course](http://www.cs.helsinki.fi/courses/582663/2014/s/k/1).
+Example application for 
+[Software Architecture Project](http://www.cs.helsinki.fi/courses/582663/2014/s/k/1).
 
 This is a simple PHP-Zend Framework 2 application for
 managing ToDo lists.
@@ -10,7 +10,8 @@ managing ToDo lists.
 
 ## Install
 
-If you are using Vagrant, you can use `vagrant up` to install project.
+If you are using [Vagrant](https://www.vagrantup.com/downloads.html), 
+you can use `vagrant up` to install project.
 
 ### Manual install 
 
